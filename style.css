@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #121212;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  width: 370px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.instructions {
+  text-align: left;
+  font-size: 14px;
+  background-color: #2b2b2b;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.instructions ul {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.instructions li {
+  margin-bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+.valid {
+  color: #00ff99;
+  font-weight: bold;
+}
+.valid::before {
+  content: '✔ ';
+}
+
+.invalid {
+  color: #ff6666;
+}
+.invalid::before {
+  content: '✖ ';
+}
+
+.blink {
+  animation: blink-animation 0.5s;
+}
+@keyframes blink-animation {
+  0% { background-color: #333; }
+  50% { background-color: #00ff9960; }
+  100% { background-color: transparent; }
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #2b2b2b;
+  color: #fff;
+  font-size: 16px;
+}
+
+.toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #ccc;
+}
+
+#strengthBar {
+  height: 10px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 5px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+#strengthText {
+  font-size: 16px;
+  font-weight: bold;
+}
